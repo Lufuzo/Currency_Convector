@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency_Convector", "Currency_Convector\Currency_Convector.csproj", "{760A2E1E-357F-421D-B7C2-2ACA2001CAF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit_Tests", "NUnit_Tests\NUnit_Tests.csproj", "{4A149895-6401-4E4D-B3AD-3B3C447AA221}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{760A2E1E-357F-421D-B7C2-2ACA2001CAF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760A2E1E-357F-421D-B7C2-2ACA2001CAF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760A2E1E-357F-421D-B7C2-2ACA2001CAF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760A2E1E-357F-421D-B7C2-2ACA2001CAF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A149895-6401-4E4D-B3AD-3B3C447AA221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A149895-6401-4E4D-B3AD-3B3C447AA221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A149895-6401-4E4D-B3AD-3B3C447AA221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A149895-6401-4E4D-B3AD-3B3C447AA221}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {761BEFAF-6A4B-4752-965C-62CD84D5B49D}
+	EndGlobalSection
+EndGlobal
