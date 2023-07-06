@@ -79,14 +79,14 @@ namespace Currency_Convector
                     }
                     else
                     {
-                        lblError.Text = ("Failed to retrieve exchange rates. Status code: " + response.StatusCode);
-                        lblError.Visible = true;
+                        string mess = ("Failed to retrieve exchange rates. Status code: " + response.StatusCode);
+                       
+                        MessageBox.Show(mess, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                 Console.WriteLine("An error occurred: " + ex.Message);
-  
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
           
@@ -106,16 +106,26 @@ namespace Currency_Convector
 
         static double ConvertCurrency(double amount, Rates rates, string outputCurrency, double val)
         {
-            if (outputCurrency != string.Empty)
+            double sum = 0;
+            try
             {
-                //double rate = rates[outputCurrency];
-                double rate = val;
-                return amount * rate;
+                if (outputCurrency != string.Empty)
+                {
+                    //double rate = rates[outputCurrency];
+                    double rate = val;
+                    sum =  amount * rate;
+                }
+                else
+                {
+                    throw new ArgumentException("Invalid output currency");
+                }
             }
-            else
+            catch ( Exception ex)
             {
-                throw new ArgumentException("Invalid output currency");
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            return sum;
         }
 
         private void btnConvect_Click(object sender, EventArgs e)
