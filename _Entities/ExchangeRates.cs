@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Currency_Convector.Models
+namespace _Entities
 {
-    public class Rates : Dictionary<string, double>
+    public class ExchangeRates
     {
-         
+        public string Base { get; set; }
+        public Rates Rates { get; set; }
     }
 }

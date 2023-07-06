@@ -1,18 +1,18 @@
-﻿using Currency_Convector.Contract;
+﻿using _Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Currency_Convector.Service
+namespace _Repository
 {
-    public class ExchangeRateService : IExchangeRateService
+    public class ExchangeRateRepo : IExchangeRate
     {
-
         private Dictionary<string, decimal> exchangeRates;
 
-        public ExchangeRateService()
+
+        public ExchangeRateRepo()
         {
             // Initialize exchange rates
             exchangeRates = new Dictionary<string, decimal>
@@ -21,10 +21,9 @@ namespace Currency_Convector.Service
             { "EUR", 0.85m },  // Euro
             { "GBP", 0.72m },  // British Pound
             { "JPY", 110.0m }, // Japanese Yen
-            // Add more exchange rates as needed
+         
         };
         }
-
         public decimal GetExchangeRate(string baseCurrency, string targetCurrency)
         {
             if (!exchangeRates.ContainsKey(baseCurrency))
@@ -42,32 +41,5 @@ namespace Currency_Convector.Service
 
             return targetRate / baseRate;
         }
-
-        public List<KeyValuePair<string, decimal>> GetSortedRates(Dictionary<string, decimal> rates)
-        {
-            List<KeyValuePair<string, decimal>> sortedRates = rates.ToList();
-
-            sortedRates.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
-
-            return sortedRates;
-        }
-
-
-        public void DisplayTop10MostValuableCurrencies(Dictionary<string, decimal> rates)
-        {
-            List<KeyValuePair<string, decimal>> sortedRates = GetSortedRates(rates);
-
-            int count = Math.Min(sortedRates.Count, 10);
-
-            Console.WriteLine("Top 10 Most Valuable Currencies:");
-            for (int i = 0; i < count; i++)
-            {
-                KeyValuePair<string, decimal> rate = sortedRates[i];
-                Console.WriteLine($"{rate.Key}: {rate.Value}");
-            }
-        }
-
-        
     }
 }
-

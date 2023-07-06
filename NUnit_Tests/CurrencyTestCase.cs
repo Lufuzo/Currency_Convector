@@ -1,5 +1,4 @@
-﻿using Currency_Convector.Contract;
-using Currency_Convector.Service;
+﻿using _Services;
 using Microsoft.VisualBasic;
 using NUnit.Framework;
 using System;

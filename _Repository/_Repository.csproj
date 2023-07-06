@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.13.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\_Services\_Services.csproj" />
+    <ProjectReference Include="..\_Contracts\_Contracts.csproj" />
   </ItemGroup>
 
 </Project>

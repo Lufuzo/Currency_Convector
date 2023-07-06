@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Currency_Convector.Contract
+namespace _Contracts
 {
-    public interface IExchangeRateService
+    public interface IExchangeRate
     {
         decimal GetExchangeRate(string baseCurrency, string targetCurrency);
     }

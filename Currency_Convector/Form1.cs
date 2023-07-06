@@ -1,5 +1,5 @@
-﻿using Currency_Convector.Models;
-using Currency_Convector.Service;
+﻿using _Entities;
+using _Services;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
